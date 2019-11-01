@@ -2,7 +2,7 @@
 #map_linear 80 /data/bioinf/human_1pc/hg19_chr1-Y.bwa-mem2.fa /data/bioinf/human_1pc/hg19_chr1-Y.fa downsampled.fasta > linear.sam
 #cat test.sam linear.sam | awk -v OFS="\t" '$1=$1' | sambamba view -S -f bam /dev/stdin  > linear.bam
 
-#sambamba sort -t 50 linear.bam
+sambamba sort -t 50 linear.bam
 echo "Indexing"
 #sambamba index -t 50 -p linear.sorted.bam
 
