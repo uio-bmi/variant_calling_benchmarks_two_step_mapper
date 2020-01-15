@@ -48,14 +48,14 @@ REGION_START="1:0"
 REGION_START=""
 
 ## Size of the region each job will cover
-REGION_SIZE=1000000 # 1 mb
+REGION_SIZE=10000000 # 1 mb
 
 ## Number of threads each job will be allocated
-NUM_THREADS=10
+NUM_THREADS=1
 
 ## Number of slices to run at the same time in each region/job.
 ## Because of I/O operations, you may want to use a value which is more than your total thread count to fully utilize your CPU power.
-NUM_SLICES_RUNNING=30
+NUM_SLICES_RUNNING=4
 
 ## Whether or not the temporary directories should be cleaned after genotyping
 CLEAN_UP=0
@@ -65,7 +65,7 @@ CLEAN_UP=0
 CHROMOSOMES="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 X"
 #CHROMOSOMES="1"
 # chr21 chr22 chrX"
-CHROMOSOMES="21"
+#CHROMOSOMES="21"
 #CHROMOSOMEs="5"
 
 # Call parameters #
