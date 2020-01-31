@@ -10,11 +10,15 @@ which software is needed and install them manually.
 
 ## 2) Download the data
 There are only two data file needed for reproducing the analysis (a fasta file with reads and a vcf file with truth variant calls).
-Both are available at Zenodo: https://zenodo.org/record/3523340#.XbwLFHX0lGE
-Download the two files and extract the fasta file.
+The truth vcf file is available from NCBI [here](http://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/AshkenazimTrio/HG002_NA24385_son/NISTv3.3.2/GRCh37/HG002_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-22_v.3.3.2_highconf_triophased.vcf.gz).
+The fasta file used to run the linear reference genome benchmarks is availale [here](https://zenodo.org/record/3523340/files/downsampled.fasta.gz?download=1). Download these two files.
 
-You will also need vg graphs and Offset-based graphs. All these are available here: https://zenodo.org/record/2586090/files/human_pruned_1pc.tar.gz?download=1
+You also need a bed file of "confident regions". This file is for simplicity included in this repository (confident.bed).
+
+You will also need vg graphs and Offset-based graphs. All these are available here: https://zenodo.org/record/2586090/files/human_pruned_1pc.tar.gz?download=1.
 Extract the gz file after download.
+
+
 
 # Run the analysis
 Init a variable pointing to your graphtyper-pipelines installation:
