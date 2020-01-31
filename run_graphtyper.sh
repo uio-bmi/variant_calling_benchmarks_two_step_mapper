@@ -14,7 +14,7 @@ cp graphtyper_config.sh $graphtyper_pipelines_dir/.
 
 # Run graphtyper, and hap.py
 echo "Running graphtyper"
-bash $graphtyper_pipelines_dir/make_graphtyper_pipeline.sh $bam_file_base.sorted.bam $graphtyper_pipelines_dir/graphtyper_config.sh | parallel -j 60
+bash $graphtyper_pipelines_dir/make_graphtyper_pipeline.sh $bam_file_base.sorted.bam $graphtyper_pipelines_dir/graphtyper_config.sh | parallel -j 10
 
 graphtyper vcf_concatenate $graphtyper_pipelines_dir/results/*/*.vcf.gz | bgzip -c > ${bam_file_base}_variants.vcf.gz
 echo "Running happy"
